@@ -34,15 +34,13 @@ def simple_calculator(): # define a calculator function to execute different ope
   print("h.square_root")
   print("i.cube_root")
   print("j.modulus")
-  print("m.exit")
-  try:
-    select = input("enter (a,b,c,d,e,f,g,h,i,j):")  #select an operation from the list
+  print("k.exit")
+  while True:  # Keep running until user chooses to exit
+    select = input("enter (a,b,c,d,e,f,g,h,i,j,k):")  #select an operation from the list
     if select in ["a","b","c","d","e","f","g","h","i","j"]:
-       # If the selection is valid, ask for two numbers as input
       num1 = float(input("enter the first number:"))
       num2 = float(input("enter the second number:"))
-## Perform operation based on the user's selection
-      if select == "a":
+      if select == "a":## Perform operation based on the user's selection
         print(f":{addition(num1,num2)}") # Call addition function then print the result
       elif select == "b":
         print(f":{subtraction(num1,num2)}")
@@ -63,8 +61,7 @@ def simple_calculator(): # define a calculator function to execute different ope
       elif select == "j":
         print(f":{modulus(num1,num2)}")
     else:
-      print("invalid input, exit")  # If input invalid option, display a message
-  except: #Fixed indentation of except block to align with try
-    print("Invalid input, Please enter correct values.")
-  # run my simple calculator function
+        if select == "k":
+          print("invalid input, exit")  # If input invalid option, display a message
+          break
 simple_calculator()

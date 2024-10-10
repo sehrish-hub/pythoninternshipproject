@@ -1,7 +1,7 @@
 def chatbot(user_question):
     user_question = user_question.lower()
     # def user_question():
-    if user_question == "What is your name?": 
+    if user_question == "what is your name?": 
         return "Chatbot: My name is Sehrish Shafiq!."
     elif user_question == "how are you?": 
         return "Chatbot: I'm doing well, thank you!."
